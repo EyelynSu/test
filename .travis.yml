@@ -1,12 +1,6 @@
 language: php
 
 php:
-  - 7.1.9
-  - nightly
+  - 7.2
 
-env:
-  - ROOT=$PWD
-
-install:
-  - php -version
-  - echo $ROOT
+install:true
