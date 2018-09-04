@@ -10,5 +10,3 @@ env:
 install:
   - php -version
   - echo $ROOT
-
-script:ture
