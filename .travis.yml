@@ -5,3 +5,5 @@ php:
 
 install:
   - echo $ROOT
+
+script: skip
