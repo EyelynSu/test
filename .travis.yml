@@ -9,7 +9,6 @@ before_install:
 
 install:
   - echo $PATH
-  - php-fpm
   - nginx
 
 script: skip
