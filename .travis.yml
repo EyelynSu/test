@@ -1,0 +1,14 @@
+language: php
+
+php:
+  - 7.1.9
+  - nightly
+
+env:
+  - ROOT=$PWD
+
+install:
+  - php -version
+  - echo $ROOT
+
+script:ture
