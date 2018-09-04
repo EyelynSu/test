@@ -7,8 +7,6 @@ env:
   global:
     $ROOT=$PWD
 
-before_install:
-
 install:
   - wget http://nginx.org/download/nginx-1.13.9.tar.gz
   - wget https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.gz
