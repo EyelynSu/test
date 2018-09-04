@@ -5,10 +5,10 @@ php:
   - 7.1
 
 before_install:
-  - sudo apt-get install -y nginx
+  - apt-get install -y nginx
 
 install:
   - echo $PATH
-  - sudo nginx
+  - nginx
 
 script: skip
