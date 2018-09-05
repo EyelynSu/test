@@ -5,7 +5,8 @@ php:
   - 7.1
 env:
   global:
-    $ROOT=$PWD
+    ROOT=$PWD
+
 before_install:
   - sudo apt-get install libpcre3 libpcre3-dev
   - sudo apt-get install zlib1g-dev
@@ -17,6 +18,8 @@ install:
   - ./configure --prefix=/home/travis/nginx
   - make && make install
   - export PATH=/home/travis/nginx/sbin:$PATH
+  - cd ..
+  - echo $ROOT
 
 script:
-  - nginx
+  - nginx -c
