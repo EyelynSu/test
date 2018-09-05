@@ -6,16 +6,15 @@ php:
 env:
   global:
     $ROOT=$PWD
+before_install:
+  - sudo apt-get install libpcre3 libpcre3-dev
+  - sudo apt-get install zlib1g-dev
 
 install:
   - wget http://nginx.org/download/nginx-1.13.9.tar.gz
-  - wget https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.gz
-  - wget http://www.zlib.net/zlib-1.2.11.tar.gz
   - tar zxvf nginx-1.13.9.tar.gz
-  - tar zxvf pcre-8.41.tar.gz
-  - tar zxvf zlib-1.2.11.tar.gz
   - cd nginx-1.13.9
-  - ./configure --prefix=/home/travis/nginx --with-http_ssl_module --with-pcre=../pcre-8.41 --with-zlib=../zlib-1.2.11
+  - ./configure --prefix=/home/travis/nginx
   - make && make install
   - export PATH=/home/travis/nginx/sbin:$PATH
 
